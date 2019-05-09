@@ -9,6 +9,9 @@
 	<artifactId>POC_PI_AWS-ear</artifactId>
 	<packaging>ear</packaging>
 
+
+
+
 	<dependencies>
 		<dependency>
 			<groupId>tn.esprit</groupId>
