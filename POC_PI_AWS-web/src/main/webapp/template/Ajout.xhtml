@@ -1,34 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"
-	template="/template/templateBack.xhtml">
-
-
+	template="/Template/Template.xhtml">
 <ui:define name="content">
+
+
+<h:form id="form"> 
 <h:panelGrid columns="2">
-	<h:form>
-	
-	<h:outputText value="Title"/>
-	<h:inputText value="#{classBean.title}"/>
-	<h:outputText value="description"/>
-	<h:inputText value="#{classBean.description}"/>
-	<h:outputText value="Date"/>
-	<h:inputText value="#{classBean.outDate}"/>
-	<h:outputText value="Branche"/>
-	<h:inputText value="#{classBean.branche}"/>
-	
-	<h:outputText value="Id User"/>
-	<h:inputText value="#{classBean.id}"/>
-	
-	
-	<h:commandButton action="#{classBean.Ajout()}" value="Add a project"/>
-	
-</h:form>
+<h:outputText value="Description" />
+<h:inputText value="#{tasksBean.description}" />
+
+<h:outputText value="startDate" />
+<h:inputText value="#{tasksBean.startDate}" >
+	<f:convertDateTime  pattern="dd-MM-yyyy"/>
+	<h:message for="date" style="color:red"/>
+  </h:inputText>	
+
+
+<h:outputText value="deadline" />
+<h:inputText value="#{tasksBean.deadline}" >
+	<f:convertDateTime  pattern="dd-MM-yyyy"/>
+	<h:message for="date" style="color:red"/>
+  </h:inputText>	
+
+<h:outputText value="Complexity" />
+		<h:selectOneMenu value="#{tasksBean.complexity}">
+			<f:selectItem itemLabel="Select the complexity" itemValue=""/>
+			<f:selectItems value="#{data.complexity}"/>
+		</h:selectOneMenu>
+
+<h:outputText value="estimation" />
+<h:inputText value="#{tasksBean.estimation}" />
+
+<h:commandButton action="#{tasksBean.AddTask()}" value="Add suggested task" />
+
 </h:panelGrid>
+</h:form>
 </ui:define>
-
-
 </ui:composition>
+
