@@ -43,6 +43,13 @@ public class Post {
 		return "Post [userId=" + userId + ", id=" + id + ", title=" + title + "]";
 	}
 
+	 
+	
+	
+	
+	
+	
+	
 	
 	
 }
