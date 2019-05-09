@@ -8,6 +8,10 @@
 	</parent>
 	<artifactId>POC_PI_AWS-ear</artifactId>
 	<packaging>ear</packaging>
+	
+	
+	
+	
 
 	<dependencies>
 		<dependency>
