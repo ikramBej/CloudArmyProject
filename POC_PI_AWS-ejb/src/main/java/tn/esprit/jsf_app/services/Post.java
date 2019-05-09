@@ -38,10 +38,7 @@ public class Post {
 		this.body = body;
 	}
 
-	@Override
-	public String toString() {
-		return "Post [userId=" + userId + ", id=" + id + ", title=" + title + "]";
-	}
+	
 
 	
 	
